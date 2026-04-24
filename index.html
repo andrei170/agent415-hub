@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AG1 × C.J. Nakagawa · Growth Package</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0805;--bg-2:#110e0a;--surface:#1a160f;--line:rgba(201,151,58,.15);--text:#f8f3e8;--muted:#a69885;--gold:#c9973a;--gold-2:#e2b96a;--gold-3:#f0d79a}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.65;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(201,151,58,.025) 1px,transparent 1px);background-size:24px 24px;pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;top:-30%;right:-10%;width:70%;height:80%;background:radial-gradient(circle,rgba(201,151,58,.07) 0%,transparent 60%);pointer-events:none;z-index:0}
+.container{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+nav{padding:28px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(10,8,5,.94);backdrop-filter:blur(14px);z-index:100}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:22px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:.05em}
+.nav-cta{padding:10px 22px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0a0805;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px}
+section{padding:90px 0}
+.hero{padding:110px 0 80px;text-align:center}
+.eyebrow{display:inline-block;padding:6px 16px;background:rgba(201,151,58,.1);border:1px solid rgba(201,151,58,.3);border-radius:24px;font-size:12px;font-weight:600;color:var(--gold-2);letter-spacing:.2em;text-transform:uppercase;margin-bottom:28px}
+h1{font-size:clamp(44px,6vw,72px);font-weight:800;line-height:1.05;letter-spacing:-.03em;margin-bottom:28px}
+h1 em{font-style:normal;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-3) 50%,var(--gold-2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+h2{font-size:clamp(30px,4vw,42px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:18px}
+h3{font-size:22px;font-weight:700}
+p{color:var(--muted);font-size:17px;max-width:680px}
+.hero p{font-size:20px;margin:0 auto 40px}
+.meta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;padding:32px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.meta-item{text-align:center}
+.meta-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.15em;margin-bottom:10px}
+.meta-value{font-size:18px;color:var(--text);font-weight:600}
+.del-item{background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px;margin-bottom:16px;overflow:hidden;transition:.3s}
+.del-item:hover{border-color:rgba(201,151,58,.4)}
+.del-header{padding:28px 32px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:20px}
+.del-title{display:flex;align-items:center;gap:20px;flex:1}
+.del-num{font-family:monospace;color:var(--gold);font-size:14px;font-weight:700;letter-spacing:.1em;min-width:32px}
+.del-icon{width:44px;height:44px;background:rgba(201,151,58,.08);border:1px solid rgba(201,151,58,.25);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.del-icon svg{width:20px;height:20px;stroke:var(--gold-2);fill:none;stroke-width:1.8}
+.del-meta h3{font-size:18px;margin-bottom:4px}
+.del-meta p{font-size:13px;color:var(--muted);margin:0}
+.del-toggle{width:32px;height:32px;border-radius:50%;background:rgba(201,151,58,.08);display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;transition:.3s}
+.del-toggle::before,.del-toggle::after{content:'';position:absolute;background:var(--gold-2);top:50%;left:50%;transition:.3s}
+.del-toggle::before{width:12px;height:2px;transform:translate(-50%,-50%)}
+.del-toggle::after{width:2px;height:12px;transform:translate(-50%,-50%)}
+.del-item.open .del-toggle::after{opacity:0}
+.del-body{max-height:0;overflow:hidden;transition:.4s}
+.del-item.open .del-body{max-height:3000px;padding:0 32px 32px}
+.del-body-inner{padding-top:8px;border-top:1px solid var(--line);padding-left:52px}
+.del-body h4{font-size:15px;color:var(--gold-2);text-transform:uppercase;letter-spacing:.1em;margin:24px 0 12px}
+.del-body h4:first-child{margin-top:20px}
+.del-body p,.del-body li{font-size:15px;line-height:1.7;color:var(--muted)}
+.del-body ul{list-style:none;padding:0}
+.del-body li{padding:8px 0 8px 20px;position:relative}
+.del-body li::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;position:absolute;left:0;top:18px}
+.del-body strong{color:var(--text);font-weight:600}
+.del-link{display:inline-block;margin-top:20px;padding:12px 24px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0a0805;text-decoration:none;border-radius:8px;font-weight:700;font-size:14px}
+.cta-section{background:linear-gradient(135deg,rgba(201,151,58,.08) 0%,rgba(226,185,106,.03) 100%);border:1px solid rgba(201,151,58,.25);border-radius:24px;padding:80px 60px;text-align:center;margin:40px 0 80px}
+.cta-section h2{max-width:620px;margin:0 auto 20px}
+.cta-section p{margin:0 auto 36px;max-width:580px;font-size:18px}
+.cta-primary{display:inline-block;padding:20px 44px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0a0805;text-decoration:none;border-radius:12px;font-weight:700;font-size:16px;box-shadow:0 12px 40px rgba(201,151,58,.3)}
+.cta-primary:hover{transform:translateY(-2px)}
+.footer{padding:60px 0;border-top:1px solid var(--line);text-align:center}
+.footer p{margin:0 auto;font-size:14px}
+.footer a{color:var(--gold-2);text-decoration:none}
+@media(max-width:768px){
+.meta-grid{grid-template-columns:1fr}
+.cta-section{padding:50px 24px}
+.del-item.open .del-body{padding:0 20px 24px}
+.del-body-inner{padding-left:0}
+.del-header{padding:20px}
+section{padding:60px 0}
+}
+.reveal{opacity:0;transform:translateY(30px);transition:.8s}
+.reveal.in{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<nav>
+<div class="container nav-inner">
+<div class="logo">AG1 CONSULTING</div>
+<a href="https://calendly.com/andreicopy/15min" class="nav-cta" target="_blank">Book A Call</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+<div class="eyebrow reveal">GROWTH PACKAGE · BUILT FOR CJ</div>
+<h1 class="reveal">A Content And Positioning System<br>Built For <em>C.J. Nakagawa</em></h1>
+<p class="reveal">Research, campaign angles, a live landing page, a 10-email newsletter sequence, and a content engine framework. Built to match a $181M sales year with a digital footprint that finally reflects it.</p>
+<div class="meta-grid reveal">
+<div class="meta-item"><div class="meta-label">Prospect</div><div class="meta-value">C.J. Nakagawa</div></div>
+<div class="meta-item"><div class="meta-label">Built By</div><div class="meta-value">Andrei · AG1 Consulting</div></div>
+<div class="meta-item"><div class="meta-label">Delivered</div><div class="meta-value">April 24, 2026</div></div>
+</div>
+</div>
+</section>
+
+<section style="padding-top:40px">
+<div class="container">
+<div class="eyebrow reveal">DELIVERABLES</div>
+<h2 class="reveal">Inside The Package</h2>
+<p class="reveal" style="margin-bottom:40px">Six deliverables, each addressing a specific lever where the offline track record outpaces the current digital footprint.</p>
+
+<div class="del-item reveal">
+<div class="del-header" onclick="this.parentElement.classList.toggle('open')">
+<div class="del-title">
+<span class="del-num">01</span>
+<div class="del-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
+<div class="del-meta"><h3>Research Snapshot</h3><p>Five content accelerators, publicly observable</p></div>
+</div>
+<div class="del-toggle"></div>
+</div>
+<div class="del-body"><div class="del-body-inner">
+<h4>The Five Accelerators</h4>
+<ul>
+<li><strong>The $181M proof isn't in the IG bio.</strong> The single most credentialing line in luxury RE is missing from the surface that new visitors see first.</li>
+<li><strong>LinkedIn is dormant.</strong> The platform where Bay Area HNW buyers live, and it's running on listing announcements.</li>
+<li><strong>No listings-to-content pipeline.</strong> Every listing is a content factory waiting. None of it is being compiled.</li>
+<li><strong>YouTube long-form is unclaimed.</strong> No "CJ Nakagawa" channel. Neighborhood tours and market commentary have almost no serious competitor in the Marin + SF luxury tier.</li>
+<li><strong>No off-market capture.</strong> The single highest-value asset in luxury RE, and there is no way for a new visitor to opt in to receive it.</li>
+</ul>
+<h4>The Biggest Fix</h4>
+<p>Build the listings-to-content pipeline. Every new listing produces a Reel, a LinkedIn post, a YouTube walkthrough, a neighborhood explainer, and a buyer guide. The raw material is already being created. It just needs compiling and distribution.</p>
+</div></div>
+</div>
+
+<div class="del-item reveal">
+<div class="del-header" onclick="this.parentElement.classList.toggle('open')">
+<div class="del-title">
+<span class="del-num">02</span>
+<div class="del-icon"><svg viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/></svg></div>
+<div class="del-meta"><h3>5 Campaign Angles</h3><p>Positioning hooks, Bay Area luxury</p></div>
+</div>
+<div class="del-toggle"></div>
+</div>
+<div class="del-body"><div class="del-body-inner">
+<h4>Angle Matrix</h4>
+<ul>
+<li><strong>The $181M Year:</strong> Lead with the number. It reframes the category.</li>
+<li><strong>The Third-Generation Broker:</strong> Heritage as competitive moat.</li>
+<li><strong>Whisper Listings:</strong> Off-market scarcity positioning.</li>
+<li><strong>The Architect's Broker:</strong> Cube 3 development background as taste signal.</li>
+<li><strong>The Quiet Transaction:</strong> Discretion-first, for athletes and execs.</li>
+</ul>
+<h4>Brand Voice Rules</h4>
+<p>Understated luxury. Authority by proof, not adjectives. Heritage-forward. Architectural specificity. Zero hustle language. Zero course-guru tone. Douglas Elliman's Ryan Serhant for scale, Marin-coastal restraint for register.</p>
+</div></div>
+</div>
+
+<div class="del-item reveal">
+<div class="del-header" onclick="this.parentElement.classList.toggle('open')">
+<div class="del-title">
+<span class="del-num">03</span>
+<div class="del-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none"/></svg></div>
+<div class="del-meta"><h3>3 Ad Scripts</h3><p>30 to 60 seconds, brand positioning</p></div>
+</div>
+<div class="del-toggle"></div>
+</div>
+<div class="del-body"><div class="del-body-inner">
+<h4>Script 1 · The $181M Year (45s)</h4>
+<p>Lead with the number. Third-generation framing. Local knowledge stacks differently.</p>
+<h4>Script 2 · Whisper Listings (30s)</h4>
+<p>Thirty percent of Marin's best inventory never hits MLS. Network access positioning.</p>
+<h4>Script 3 · The Architect's Broker (60s)</h4>
+<p>Reading a home through a builder's eyes. Cube 3 as the credential. Design-forward buyer appeal.</p>
+</div></div>
+</div>
+
+<div class="del-item reveal">
+<div class="del-header" onclick="this.parentElement.classList.toggle('open')">
+<div class="del-title">
+<span class="del-num">04</span>
+<div class="del-icon"><svg viewBox="0 0 24 24"><path d="M3 7l9 6 9-6v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M3 7l9 6 9-6"/></svg></div>
+<div class="del-meta"><h3>10-Email Newsletter Sequence</h3><p>Off-market briefs, 25-day drip</p></div>
+</div>
+<div class="del-toggle"></div>
+</div>
+<div class="del-body"><div class="del-body-inner">
+<h4>Sequence Overview</h4>
+<p>Written from CJ to past clients, warm leads, and network referrers. 150-300 words per email. Value-first, no course pitches. Purpose: stay top of mind between transactions and drive inbound intros.</p>
+<h4>Email Arc</h4>
+<ul>
+<li>Day 0 · Welcome and how the list works</li>
+<li>Day 2 · Tiburon waterfront market note</li>
+<li>Day 5 · Mill Valley vs Tiburon vs Belvedere breakdown</li>
+<li>Day 8 · The deal I walked a client away from</li>
+<li>Day 11 · Private brief, Belvedere estate</li>
+<li>Day 14 · Why I work weekends</li>
+<li>Day 17 · What athlete buyers actually need</li>
+<li>Day 20 · How price per square foot lies in Marin</li>
+<li>Day 23 · Cube 3 development update</li>
+<li>Day 25 · Final note, what comes next</li>
+</ul>
+</div></div>
+</div>
+
+<div class="del-item reveal">
+<div class="del-header" onclick="this.parentElement.classList.toggle('open')">
+<div class="del-title">
+<span class="del-num">05</span>
+<div class="del-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
+<div class="del-meta"><h3>Live Landing Page</h3><p>Dark luxury, navy and gold, deployed</p></div>
+</div>
+<div class="del-toggle"></div>
+</div>
+<div class="del-body"><div class="del-body-inner">
+<h4>Live URL</h4>
+<p><a href="https://andrei170.github.io/agent415-landing/" target="_blank" style="color:var(--gold-2)">andrei170.github.io/agent415-landing/</a></p>
+<h4>What's On It</h4>
+<ul>
+<li>Hero with 3-min positioning video placeholder</li>
+<li>Stats bar: $181M+, $1.8B+, 900+, 3 generations</li>
+<li>Neighborhood tag row: Tiburon, Belvedere, Mill Valley, Ross, Kentfield, San Rafael, Pacific Heights, Presidio Heights</li>
+<li>3 problem cards framed for luxury buyers: off-market access, neighborhood reality, investment upside</li>
+<li>3 pillar framework: local knowledge, HNW network, discretion</li>
+<li>Off-market list opt-in</li>
+<li>Consultation-based engagement block with commission hint language</li>
+<li>FAQ covering privacy, off-market channels, referral routing</li>
+</ul>
+<a href="https://andrei170.github.io/agent415-landing/" target="_blank" class="del-link">View Landing Page →</a>
+</div></div>
+</div>
+
+<div class="del-item reveal">
+<div class="del-header" onclick="this.parentElement.classList.toggle('open')">
+<div class="del-title">
+<span class="del-num">06</span>
+<div class="del-icon"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1118 0 9 9 0 01-18 0z"/><path d="M12 7v5l3 3"/></svg></div>
+<div class="del-meta"><h3>Content Engine Framework</h3><p>Listings-first, one week per month</p></div>
+</div>
+<div class="del-toggle"></div>
+</div>
+<div class="del-body"><div class="del-body-inner">
+<h4>The Engine</h4>
+<ul>
+<li><strong>Input:</strong> Each new listing CJ takes.</li>
+<li><strong>Output per listing:</strong> One Instagram Reel, one LinkedIn long-form post, one YouTube walkthrough (2-4 min), one neighborhood explainer (short), one buyer guide email.</li>
+<li><strong>Cadence:</strong> One filming day per month covering 3-5 active listings. Rest of the month is editing, scheduling, and distribution.</li>
+<li><strong>YouTube channel:</strong> CJ Nakagawa personal channel. Neighborhood tours (Tiburon, Belvedere, Mill Valley, Pacific Heights). Quarterly market updates. Cube 3 development diaries.</li>
+<li><strong>LinkedIn cadence:</strong> Two posts per week, market analysis and anonymized deal stories.</li>
+<li><strong>Retargeting layer:</strong> Small paid boost on top-performing organic posts to HNW Bay Area lookalikes.</li>
+</ul>
+<h4>Short Positioning Video</h4>
+<p>3-5 minute video outline lives above the fold on the hub. Opens with the $181M number, covers heritage, specialty, how we work, proof. Replaces "hi welcome to my website" with hard proof in the first 30 seconds.</p>
+</div></div>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="cta-section reveal">
+<div class="eyebrow">NEXT STEP</div>
+<h2>If Any Of This Clicks,<br>Let's Talk For 15 Minutes</h2>
+<p>No pitch unless it makes sense for both of us. Just a conversation about what the content and positioning system would actually look like, whether it's built together or you run it in-house.</p>
+<a href="https://calendly.com/andreicopy/15min" class="cta-primary" target="_blank">Book A 15-Min Call →</a>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+<p>Built by AG1 Consulting · <a href="mailto:info@andreicopy.net">info@andreicopy.net</a> · April 2026</p>
+</div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
+</script>
+</body>
+</html>
