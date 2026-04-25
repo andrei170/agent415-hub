@@ -117,6 +117,36 @@ p{color:var(--muted);font-size:17px;max-width:680px}
 .offer-block{padding:32px 24px}
 section{padding:60px 0}
 }
+.moat-callout{margin-top:32px;padding:32px 36px;background:linear-gradient(135deg,rgba(201,151,58,.08) 0%,rgba(226,185,106,.03) 100%);border:1px solid var(--line-2);border-radius:14px}
+.moat-eyebrow{font-size:11px;color:var(--gold-2);text-transform:uppercase;letter-spacing:.18em;font-weight:700;margin-bottom:12px}
+.moat-callout p{font-size:18px;color:var(--text);margin:0;max-width:none;line-height:1.6}
+.moat-callout p strong{color:var(--gold-2)}
+.agenda-block{padding:40px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px}
+.agenda-item{display:grid;grid-template-columns:90px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+.agenda-item:last-child{border-bottom:0;padding-bottom:0}
+.agenda-item:first-child{padding-top:0}
+.agenda-time{font-family:monospace;color:var(--gold-2);font-weight:700;font-size:14px;letter-spacing:.05em;padding-top:4px}
+.agenda-content h4{font-size:16px;color:var(--text);text-transform:none;letter-spacing:0;margin:0 0 6px;font-weight:600}
+.agenda-content p{color:var(--muted);font-size:14px;margin:0;max-width:none;line-height:1.5}
+.contrast-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+.contrast-card{padding:36px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px}
+.contrast-card.current{opacity:.7}
+.contrast-card.future{border-color:var(--line-2);background:linear-gradient(180deg,rgba(201,151,58,.06) 0%,var(--bg-2) 100%)}
+.contrast-tag{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:14px;display:inline-block}
+.contrast-card.current .contrast-tag{background:rgba(166,152,133,.15);color:var(--muted);border:1px solid rgba(166,152,133,.3)}
+.contrast-card.future .contrast-tag{background:rgba(201,151,58,.15);color:var(--gold-2);border:1px solid rgba(201,151,58,.3)}
+.contrast-card h3{margin-bottom:18px;font-size:20px}
+.contrast-card ul{list-style:none;padding:0;margin:0}
+.contrast-card li{padding:8px 0 8px 22px;position:relative;color:var(--muted);font-size:15px;line-height:1.6}
+.contrast-card.current li::before{content:'';width:6px;height:6px;background:var(--muted);border-radius:50%;position:absolute;left:0;top:14px;opacity:.5}
+.contrast-card.future li::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;position:absolute;left:0;top:14px}
+.premium-table{margin-top:24px;border-color:var(--line-2)!important;background:linear-gradient(180deg,rgba(201,151,58,.04) 0%,var(--bg-2) 100%)!important}
+.premium-eyebrow{display:inline-block;padding:5px 14px;background:rgba(201,151,58,.15);border:1px solid var(--line-2);border-radius:24px;font-size:11px;font-weight:700;color:var(--gold-2);letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+.call-agenda{text-align:left;max-width:520px;margin:0 auto 32px;display:grid;gap:14px}
+.call-agenda-item{display:grid;grid-template-columns:32px 1fr;gap:16px;align-items:start}
+.call-agenda-num{font-family:monospace;color:var(--gold-2);font-weight:700;font-size:14px;padding-top:2px}
+.call-agenda-text{color:var(--text);font-size:15px;line-height:1.6}
+@media(max-width:768px){.contrast-grid{grid-template-columns:1fr}.agenda-block{padding:28px 20px}.agenda-item{grid-template-columns:1fr;gap:4px}.moat-callout{padding:24px}}
 .reveal{opacity:0;transform:translateY(30px);transition:.8s}
 .reveal.in{opacity:1;transform:translateY(0)}
 </style>
@@ -155,6 +185,7 @@ section{padding:60px 0}
 <p>Real estate is seasonal. December through February the market goes quiet. Listings slow. Commissions slow. Every other agent in the Bay Area faces the same trough.</p>
 <p><strong>You shouldn't.</strong></p>
 <p>And here's why now. The agent-coaching market is consolidating quickly. Every quarter another six-figure operator launches a coaching arm. The slots in front of peer agents fill up. The window for a heritage, $181M, athlete-and-tech-specialty voice is open right now. It is not going to be open in two years.</p>
+<p>And specifically for you. You're at the peak of your numerical proof. The $181M year is fresh. The Sotheby's #1 ranking is current. Both of those are most sellable as a coaching product when they're <em>this year's</em> numbers, not "a few years ago" numbers. Building this in 2026 means you launch off the proof while it's still the headline. Wait until 2028 and we're selling off two-year-old data to the same audience. Same story, less voltage.</p>
 <p>This page is the plan to use the credibility you've already built to launch a high-ticket offer that runs alongside the brokerage and produces revenue twelve months a year, not just from March through November. Not instead of the brokerage. Alongside it.</p>
 <div class="signature">- Francis | Digital Pathway Consulting</div>
 </div>
@@ -235,6 +266,11 @@ section{padding:60px 0}
 <div class="market-callout reveal">
 Every name above is selling info to agents who want to be where you already are. The category has $20K–$30K/year price tags on it. There is <strong>no version</strong> of this that includes someone with your actual track record in Marin/SF luxury at the price tier you'd command.
 </div>
+
+<div class="moat-callout reveal">
+<div class="moat-eyebrow">Your Moat, In One Sentence</div>
+<p>You have a content lane no other luxury agent in this market has: <strong>Cube 3 Properties</strong>. Most luxury brokers can teach negotiation, presentation, and hustle. None of them can credibly teach modular development, energy-efficient construction, or how a broker becomes a developer. That second lane runs alongside the agent-coaching offer and double-stacks your authority. Buyers, sellers, and peer agents all read the developer story as proof of depth.</p>
+</div>
 </div>
 </section>
 
@@ -265,17 +301,18 @@ Every name above is selling info to agents who want to be where you already are.
 <div class="phase-block reveal">
 <div class="phase-num">Phase 02<span class="month">Month 2</span></div>
 <div class="phase-content">
-<h3>Private Online Community</h3>
-<p style="margin-bottom:14px">Recurring monthly layer for agents who attended the mastermind, plus new arrivals brought in by Phase 3. Monthly group call hosted by you. Off-market deal flow Q&amp;A. Network introductions. Light-touch hosting; the value is the proximity to you and the room you've assembled.</p>
+<h3>1-on-1 Premium Mentorship</h3>
+<p style="margin-bottom:14px">Application-based, capped cohort. Four luxury operators per cohort, two cohorts per year. The agents who pay this tier are running $30M+ books and want a 90-day engagement with someone who's actually transacted at $1.8B family-team scale, not a coach who teaches off a course they bought from someone else. Sold off the back of the mastermind. One-time payment per engagement, no monthly billing.</p>
 <ul>
-<li>Platform setup (Circle or Skool, configured and branded)</li>
-<li>Onboarding flow and welcome sequence</li>
-<li>Monthly call structure and content calendar</li>
-<li>Off-market deal flow channel for HNW buyers and sellers in the room</li>
-<li>Quarterly in-person dinner for top members in Marin or San Francisco</li>
-<li>Retention loop and expansion offer</li>
+<li>Application form and screening flow</li>
+<li>90-day curriculum built from the network-monetization, off-market sourcing, and athlete/tech-exec specialty playbooks</li>
+<li>Bi-weekly 1-on-1 calls with you</li>
+<li>Office-hours channel for in-deal feedback between calls</li>
+<li>Two live deal walkthroughs per cohort using anonymized real listings</li>
+<li>Quarterly in-person dinner for active mentees in Marin or San Francisco</li>
+<li>End-of-cohort capstone deliverable each member walks away with</li>
 </ul>
-<div class="rev-line"><strong>Revenue Model</strong>30 members @ $500/month = $15,000/month recurring</div>
+<div class="rev-line"><strong>Revenue Model</strong>4 spots per cohort @ $50,000 = $200,000 per cohort &nbsp;·&nbsp; 2 cohorts/year = $400,000</div>
 </div>
 </div>
 
@@ -299,6 +336,66 @@ Every name above is selling info to agents who want to be where you already are.
 </section>
 
 <section>
+<div class="container-narrow">
+<div class="eyebrow reveal">Sample</div>
+<h2 class="reveal">A Day Inside The Mastermind</h2>
+<p class="section-sub reveal">Day 1 agenda for the in-person event. Day 2 covers implementation work, dealbook reviews, and individual breakouts.</p>
+
+<div class="agenda-block reveal">
+<div class="agenda-item">
+<div class="agenda-time">9:00 AM</div>
+<div class="agenda-content">
+<h4>Welcome + The Frame</h4>
+<p>Why this room. Why now. What every seat in here walks away with by Sunday night.</p>
+</div>
+</div>
+<div class="agenda-item">
+<div class="agenda-time">9:45 AM</div>
+<div class="agenda-content">
+<h4>The Numbers That Sell</h4>
+<p>How to position $181M, $1.8B, three generations as a teachable system, not just a brag line. Translating the raw proof into something the room can actually apply.</p>
+</div>
+</div>
+<div class="agenda-item">
+<div class="agenda-time">11:00 AM</div>
+<div class="agenda-content">
+<h4>Network Monetization 101</h4>
+<p>Turning a four-decade network into recurring revenue without burning relationships. The Susan-and-CJ playbook, structured.</p>
+</div>
+</div>
+<div class="agenda-item">
+<div class="agenda-time">1:30 PM</div>
+<div class="agenda-content">
+<h4>Off-Market Access At Scale</h4>
+<p>How the Sotheby's network actually works. Where whisper inventory lives, who controls it, and how to be the agent the listings get routed to.</p>
+</div>
+</div>
+<div class="agenda-item">
+<div class="agenda-time">3:00 PM</div>
+<div class="agenda-content">
+<h4>The Athlete + Tech Specialty</h4>
+<p>How to niche into HNW client verticals (athletes, founders, VCs) without burning generalist deal flow. What this client cohort actually needs from an agent.</p>
+</div>
+</div>
+<div class="agenda-item">
+<div class="agenda-time">4:30 PM</div>
+<div class="agenda-content">
+<h4>Cube 3 As A Parallel Play</h4>
+<p>When and how a broker becomes a developer. The economics, the time cost, the failure modes. The story of how Cube 3 got built, and how to think about a second play of your own.</p>
+</div>
+</div>
+<div class="agenda-item">
+<div class="agenda-time">5:30 PM</div>
+<div class="agenda-content">
+<h4>Day 1 Wrap + 30-Day Action Plan</h4>
+<p>Each attendee leaves Day 1 with a written 30-day plan tied to their current pipeline. We work them on Day 2.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
 <div class="container">
 <div class="eyebrow reveal">Revenue Projection</div>
 <h2 class="reveal">What This Looks Like At Conservative Numbers</h2>
@@ -310,8 +407,8 @@ Every name above is selling info to agents who want to be where you already are.
 <div class="rev-amount">$360,000</div>
 </div>
 <div class="rev-row">
-<div class="rev-stream"><strong>Private Community</strong>30 members @ $500/month &nbsp;·&nbsp; full year</div>
-<div class="rev-amount">$180,000</div>
+<div class="rev-stream"><strong>1-on-1 Premium Mentorship</strong>2 cohorts / year &nbsp;·&nbsp; 4 spots @ $50,000</div>
+<div class="rev-amount">$400,000</div>
 </div>
 <div class="rev-row">
 <div class="rev-stream"><strong>Webinar + Course</strong>Launches Month 3, ramps Month 6+</div>
@@ -319,12 +416,68 @@ Every name above is selling info to agents who want to be where you already are.
 </div>
 <div class="rev-total">
 <div class="rev-total-label">Year-One Floor</div>
-<div class="rev-total-amount">$540,000+</div>
+<div class="rev-total-amount">$760,000+</div>
 </div>
 </div>
 
 <div class="rev-note reveal">
-This runs <strong>alongside</strong> the brokerage. Not instead of it. The deal flow stays the deal flow. What this adds is a parallel income stream that <strong>does not dip with the listing calendar</strong>. December through February, when most agents in this market go quiet, the community dues collect and the webinar funnel keeps converting. That is the entire point.
+This runs <strong>alongside</strong> the brokerage. Not instead of it. The deal flow stays the deal flow. What this adds is a parallel income stream that <strong>does not dip with the listing calendar</strong>. December through February, when most agents in this market go quiet, the mentorship cohort pays in advance and the webinar funnel keeps converting. That is the entire point.
+</div>
+
+<div class="rev-table premium-table reveal">
+<div class="premium-eyebrow">Premium-Only Ceiling</div>
+<p style="color:var(--muted);font-size:15px;margin-bottom:20px;max-width:none">Same plan, dialed up. Premium mastermind seats, larger mentorship cohort at the $50K tier, derivative revenue from speaking and panel work the positioning attracts.</p>
+<div class="rev-row">
+<div class="rev-stream"><strong>Premium Mastermind</strong>4 events / year &nbsp;·&nbsp; 20 seats avg @ $10,000</div>
+<div class="rev-amount">$800,000</div>
+</div>
+<div class="rev-row">
+<div class="rev-stream"><strong>1-on-1 Premium Mentorship</strong>2 cohorts / year &nbsp;·&nbsp; 6 spots @ $50,000</div>
+<div class="rev-amount">$600,000</div>
+</div>
+<div class="rev-row">
+<div class="rev-stream"><strong>Speaking + Appearances</strong>positioning derivative, ramps month 6+</div>
+<div class="rev-amount">$50,000+</div>
+</div>
+<div class="rev-total">
+<div class="rev-total-label">Year-One Ceiling</div>
+<div class="rev-total-amount">$1,450,000+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="eyebrow reveal">The Picture</div>
+<h2 class="reveal">Two Versions Of December 2026</h2>
+<p class="section-sub reveal">Same starting point. Different decision. Twelve months apart.</p>
+
+<div class="contrast-grid">
+<div class="contrast-card current reveal">
+<div class="contrast-tag">If Nothing Changes</div>
+<h3>Q4 2026, Status Quo</h3>
+<ul>
+<li>Still the #1 Sotheby's team in this market</li>
+<li>Still no online product</li>
+<li>Still selling off the same $181M proof you closed in 2024</li>
+<li>December–February still goes quiet</li>
+<li>$0 in info revenue, another year running</li>
+<li>The peer-coaching window twelve months smaller</li>
+</ul>
+</div>
+<div class="contrast-card future reveal">
+<div class="contrast-tag">If We Build This</div>
+<h3>Q4 2026, System Live</h3>
+<ul>
+<li>Mastermind run, recordings owned, list captured</li>
+<li>Two premium mentorship cohorts active, $400K booked</li>
+<li>Webinar funnel converting through the trough</li>
+<li>$760K+ in info revenue, year one</li>
+<li>December–February pre-billed and pre-sold</li>
+<li>The peer-coaching window is yours, productized</li>
+</ul>
+</div>
 </div>
 </div>
 </section>
@@ -363,7 +516,7 @@ This runs <strong>alongside</strong> the brokerage. Not instead of it. The deal 
 <li>In-person mastermind launch in 30–45 days, end to end</li>
 <li>Brand and positioning video shot in week one</li>
 <li>Landing page, ad campaign, email sequence, outreach to your existing network</li>
-<li>Private community setup in month two (platform, onboarding, monthly call structure)</li>
+<li>1-on-1 Premium Mentorship application flow and 90-day curriculum built in month two</li>
 <li>Webinar funnel and email sequences in month three</li>
 <li>LinkedIn rebuild and posting cadence dialed in</li>
 <li>Listings-to-content engine ongoing (Reels, posts, walkthroughs, neighborhood guides)</li>
@@ -402,17 +555,17 @@ This runs <strong>alongside</strong> the brokerage. Not instead of it. The deal 
 
 <div class="faq-item">
 <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How quickly is there real revenue?<div class="faq-toggle"></div></div>
-<div class="faq-a"><p>First mastermind: 30–45 days from kickoff. First community subscriptions: month two. Webinar and course revenue: month three onward, ramping into month six. The accelerator is the in-person event because seats sell faster off a fixed date than open enrollment. Phase 2 community converts off the mastermind room, which is why Phase 1 is the wedge.</p></div>
+<div class="faq-a"><p>First mastermind: 30–45 days from kickoff. First mentorship cohort: month two onward. Webinar and course revenue: month three onward, ramping into month six. The accelerator is the in-person event because seats sell faster off a fixed date than open enrollment. Phase 2 community converts off the mastermind room, which is why Phase 1 is the wedge.</p></div>
 </div>
 
 <div class="faq-item">
 <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What about December through February when the market goes quiet?<div class="faq-toggle"></div></div>
-<div class="faq-a"><p>This is the entire reason to build it. Real estate slows. Info offers don't. The community renewal cycle pre-bills in November. The mastermind for spring is pre-sold in December and January. The webinar funnel runs continuously. Year-round revenue is the unlock, and it lands in your account during the months your peers are watching the calendar.</p></div>
+<div class="faq-a"><p>This is the entire reason to build it. Real estate slows. Info offers don't. The mentorship cohort that starts in November pays in advance and runs through Q1. The mastermind for spring is pre-sold in December and January. The webinar funnel runs continuously. Year-round revenue is the unlock, and it lands in your account during the months your peers are watching the calendar.</p></div>
 </div>
 
 <div class="faq-item">
 <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why not just build YouTube and Instagram first?<div class="faq-toggle"></div></div>
-<div class="faq-a"><p>Audience-building from scratch is a 12-to-24-month exercise. High-ticket sells off an existing network in days. Phase 1 doesn't need a million followers. It needs the right twenty seats sold to people already in your contact list. Phase 3 benefits from social, and we build it in the background while Phase 1 and 2 produce revenue. By month six the social and YouTube presence is mature enough to drive a meaningful share of community enrollment. By year two it becomes the primary acquisition channel.</p></div>
+<div class="faq-a"><p>Audience-building from scratch is a 12-to-24-month exercise. High-ticket sells off an existing network in days. Phase 1 doesn't need a million followers. It needs the right twenty seats sold to people already in your contact list. Phase 3 benefits from social, and we build it in the background while Phase 1 and 2 produce revenue. By month six the social and YouTube presence is mature enough to drive a meaningful share of cohort enrollment. By year two it becomes the primary acquisition channel.</p></div>
 </div>
 </div>
 </div>
@@ -443,8 +596,15 @@ This runs <strong>alongside</strong> the brokerage. Not instead of it. The deal 
 <div class="container">
 <div class="cta-section reveal">
 <div class="eyebrow">Next Step</div>
-<h2>Twenty Minutes. No Pitch.<br>Just Look At The Plan Together.</h2>
-<p>If any of this clicks, the next step is a short call to walk through the specific shape of Phase 1 for you, and decide whether it's something we build together or something you take in-house. The plan above is built. The numbers are conservative. The team has already done the work. The only outstanding decision is whether you want to be the one to put your name on it.</p>
+<h2>Twenty Minutes. Four Topics.<br>You Decide From There.</h2>
+<p style="margin-bottom:24px">Here's exactly what we cover on the call, in order.</p>
+<div class="call-agenda">
+<div class="call-agenda-item"><span class="call-agenda-num">01</span><span class="call-agenda-text">The shape of Phase 1 calibrated to your specific network, your time, and the team you and Susan already operate.</span></div>
+<div class="call-agenda-item"><span class="call-agenda-num">02</span><span class="call-agenda-text">Mentorship cohort size, pricing, and which tier of agent we'd target with the first launch.</span></div>
+<div class="call-agenda-item"><span class="call-agenda-num">03</span><span class="call-agenda-text">Timing, kickoff date, and what your time commitment actually looks like week to week.</span></div>
+<div class="call-agenda-item"><span class="call-agenda-num">04</span><span class="call-agenda-text">What gets built, what stays in-house, and what happens after the 90 days are up.</span></div>
+</div>
+<p style="margin-bottom:36px">The plan above is built. The numbers are conservative. The team has already done the work. The only outstanding decision is whether you want to be the one to put your name on it.</p>
 <a href="https://calendly.com/andreicopy/15min" class="cta-primary" target="_blank">Book A Call</a>
 <div class="cta-sign">- Francis | Digital Pathway Consulting</div>
 </div>
