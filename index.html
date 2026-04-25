@@ -3,72 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AG1 × C.J. Nakagawa · Growth Package</title>
+<title>Built For C.J. Nakagawa · Digital Pathway Consulting</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0805;--bg-2:#110e0a;--surface:#1a160f;--line:rgba(201,151,58,.15);--text:#f8f3e8;--muted:#a69885;--gold:#c9973a;--gold-2:#e2b96a;--gold-3:#f0d79a}
+:root{--bg:#0a0805;--bg-2:#110e0a;--surface:#1a160f;--surface-2:#221c12;--line:rgba(201,151,58,.15);--line-2:rgba(201,151,58,.3);--text:#f8f3e8;--muted:#a69885;--gold:#c9973a;--gold-2:#e2b96a;--gold-3:#f0d79a;--red:#c97a3a}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.65;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(201,151,58,.025) 1px,transparent 1px);background-size:24px 24px;pointer-events:none;z-index:0}
 body::after{content:'';position:fixed;top:-30%;right:-10%;width:70%;height:80%;background:radial-gradient(circle,rgba(201,151,58,.07) 0%,transparent 60%);pointer-events:none;z-index:0}
 .container{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
-nav{padding:28px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(10,8,5,.94);backdrop-filter:blur(14px);z-index:100}
+.container-narrow{max-width:820px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+nav{padding:24px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(10,8,5,.94);backdrop-filter:blur(14px);z-index:100}
 .nav-inner{display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:800;font-size:22px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:.05em}
+.logo{font-weight:800;font-size:18px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:.18em;text-transform:uppercase}
 .nav-cta{padding:10px 22px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0a0805;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px}
-section{padding:90px 0}
-.hero{padding:110px 0 80px;text-align:center}
+section{padding:80px 0}
+.hero{padding:100px 0 60px;text-align:center}
 .eyebrow{display:inline-block;padding:6px 16px;background:rgba(201,151,58,.1);border:1px solid rgba(201,151,58,.3);border-radius:24px;font-size:12px;font-weight:600;color:var(--gold-2);letter-spacing:.2em;text-transform:uppercase;margin-bottom:28px}
-h1{font-size:clamp(44px,6vw,72px);font-weight:800;line-height:1.05;letter-spacing:-.03em;margin-bottom:28px}
+h1{font-size:clamp(40px,5.6vw,64px);font-weight:800;line-height:1.06;letter-spacing:-.03em;margin-bottom:24px}
 h1 em{font-style:normal;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-3) 50%,var(--gold-2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-h2{font-size:clamp(30px,4vw,42px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:18px}
-h3{font-size:22px;font-weight:700}
+h2{font-size:clamp(28px,3.8vw,40px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
+.section-sub{color:var(--muted);font-size:18px;margin-bottom:48px;max-width:680px}
+h3{font-size:22px;font-weight:700;color:var(--text);margin-bottom:10px}
+h4{font-size:14px;color:var(--gold-2);text-transform:uppercase;letter-spacing:.14em;margin:24px 0 12px;font-weight:700}
 p{color:var(--muted);font-size:17px;max-width:680px}
-.hero p{font-size:20px;margin:0 auto 40px}
-.meta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;padding:32px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hero p{font-size:19px;margin:0 auto 40px;color:var(--muted)}
+.meta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;padding:32px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .meta-item{text-align:center}
 .meta-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.15em;margin-bottom:10px}
-.meta-value{font-size:18px;color:var(--text);font-weight:600}
-.del-item{background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px;margin-bottom:16px;overflow:hidden;transition:.3s}
-.del-item:hover{border-color:rgba(201,151,58,.4)}
-.del-header{padding:28px 32px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:20px}
-.del-title{display:flex;align-items:center;gap:20px;flex:1}
-.del-num{font-family:monospace;color:var(--gold);font-size:14px;font-weight:700;letter-spacing:.1em;min-width:32px}
-.del-icon{width:44px;height:44px;background:rgba(201,151,58,.08);border:1px solid rgba(201,151,58,.25);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.del-icon svg{width:20px;height:20px;stroke:var(--gold-2);fill:none;stroke-width:1.8}
-.del-meta h3{font-size:18px;margin-bottom:4px}
-.del-meta p{font-size:13px;color:var(--muted);margin:0}
-.del-toggle{width:32px;height:32px;border-radius:50%;background:rgba(201,151,58,.08);display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;transition:.3s}
-.del-toggle::before,.del-toggle::after{content:'';position:absolute;background:var(--gold-2);top:50%;left:50%;transition:.3s}
-.del-toggle::before{width:12px;height:2px;transform:translate(-50%,-50%)}
-.del-toggle::after{width:2px;height:12px;transform:translate(-50%,-50%)}
-.del-item.open .del-toggle::after{opacity:0}
-.del-body{max-height:0;overflow:hidden;transition:.4s}
-.del-item.open .del-body{max-height:3000px;padding:0 32px 32px}
-.del-body-inner{padding-top:8px;border-top:1px solid var(--line);padding-left:52px}
-.del-body h4{font-size:15px;color:var(--gold-2);text-transform:uppercase;letter-spacing:.1em;margin:24px 0 12px}
-.del-body h4:first-child{margin-top:20px}
-.del-body p,.del-body li{font-size:15px;line-height:1.7;color:var(--muted)}
-.del-body ul{list-style:none;padding:0}
-.del-body li{padding:8px 0 8px 20px;position:relative}
-.del-body li::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;position:absolute;left:0;top:18px}
-.del-body strong{color:var(--text);font-weight:600}
-.del-link{display:inline-block;margin-top:20px;padding:12px 24px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0a0805;text-decoration:none;border-radius:8px;font-weight:700;font-size:14px}
-.cta-section{background:linear-gradient(135deg,rgba(201,151,58,.08) 0%,rgba(226,185,106,.03) 100%);border:1px solid rgba(201,151,58,.25);border-radius:24px;padding:80px 60px;text-align:center;margin:40px 0 80px}
+.meta-value{font-size:20px;color:var(--text);font-weight:700;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.prose p{margin-bottom:18px;font-size:17px}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:var(--text);font-weight:600}
+.signature{margin-top:32px;font-size:15px;color:var(--gold-2);font-style:italic}
+.gap-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:8px}
+.gap-card{background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px;padding:32px;transition:.3s}
+.gap-card:hover{border-color:var(--line-2)}
+.gap-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:14px}
+.gap-tag.critical{background:rgba(201,122,58,.15);color:var(--red);border:1px solid rgba(201,122,58,.3)}
+.gap-tag.high{background:rgba(201,151,58,.12);color:var(--gold-2);border:1px solid rgba(201,151,58,.3)}
+.gap-card h3{margin-bottom:14px}
+.gap-card p{font-size:16px;margin-bottom:14px}
+.gap-card .fix{padding-top:14px;border-top:1px solid var(--line);font-size:15px}
+.gap-card .fix strong{color:var(--gold-2);text-transform:uppercase;letter-spacing:.1em;font-size:12px;display:block;margin-bottom:6px}
+.market-table{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.market-row{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:24px 28px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:12px;align-items:start}
+.market-name{font-weight:700;color:var(--text);font-size:17px}
+.market-price{font-size:13px;color:var(--gold-2);margin-top:4px;letter-spacing:.05em}
+.market-note{font-size:15px;color:var(--muted);line-height:1.6}
+.market-callout{margin-top:24px;padding:24px 28px;background:rgba(201,151,58,.06);border:1px solid var(--line-2);border-radius:12px;font-size:16px;color:var(--text)}
+.market-callout strong{color:var(--gold-2)}
+.phase-block{display:grid;grid-template-columns:120px 1fr;gap:32px;padding:36px 0;border-bottom:1px solid var(--line)}
+.phase-block:last-child{border-bottom:0}
+.phase-num{font-family:monospace;font-size:14px;color:var(--gold-2);letter-spacing:.15em;font-weight:700}
+.phase-num .month{display:block;color:var(--muted);font-size:11px;margin-top:6px;letter-spacing:.1em}
+.phase-content h3{margin-bottom:14px;font-size:24px}
+.phase-content ul{list-style:none;padding:0;margin:14px 0}
+.phase-content li{padding:6px 0 6px 22px;position:relative;color:var(--muted);font-size:16px}
+.phase-content li::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;position:absolute;left:0;top:14px}
+.phase-content .rev-line{margin-top:18px;padding:14px 18px;background:rgba(201,151,58,.06);border-left:2px solid var(--gold);border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.phase-content .rev-line strong{color:var(--gold-2);text-transform:uppercase;letter-spacing:.1em;font-size:11px;display:block;margin-bottom:4px;font-weight:700}
+.rev-table{margin-top:8px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line-2);border-radius:14px;padding:32px;overflow:hidden}
+.rev-row{display:grid;grid-template-columns:1fr auto;gap:32px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.rev-row:last-of-type{border-bottom:0}
+.rev-stream{color:var(--muted);font-size:16px}
+.rev-stream strong{color:var(--text);font-weight:600;display:block;margin-bottom:2px}
+.rev-amount{font-size:22px;font-weight:700;color:var(--gold-2);font-family:monospace;white-space:nowrap}
+.rev-total{margin-top:18px;padding-top:24px;border-top:2px solid var(--line-2);display:grid;grid-template-columns:1fr auto;gap:32px;align-items:baseline}
+.rev-total-label{font-size:14px;color:var(--gold-2);text-transform:uppercase;letter-spacing:.15em;font-weight:700}
+.rev-total-amount{font-size:32px;font-weight:800;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-family:monospace;white-space:nowrap}
+.rev-note{margin-top:24px;padding:20px 24px;background:rgba(201,151,58,.06);border:1px solid var(--line);border-radius:10px;font-size:15px;color:var(--text)}
+.rev-note strong{color:var(--gold-2)}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+.proof-card{padding:36px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px}
+.proof-card h3{font-size:20px;margin-bottom:6px}
+.proof-card .role{font-size:12px;color:var(--gold-2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:18px;font-weight:700}
+.proof-card p{font-size:15px;line-height:1.7}
+.offer-block{padding:48px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line-2);border-radius:18px}
+.offer-block h3{font-size:24px;margin-bottom:8px}
+.offer-block .scope-intro{color:var(--muted);font-size:16px;margin-bottom:28px}
+.scope-list{list-style:none;padding:0;margin:0}
+.scope-list li{padding:14px 0 14px 36px;position:relative;color:var(--text);font-size:16px;border-bottom:1px solid var(--line)}
+.scope-list li:last-child{border-bottom:0}
+.scope-list li::before{content:'';width:18px;height:18px;border:1.5px solid var(--gold);border-radius:50%;position:absolute;left:0;top:18px;background:rgba(201,151,58,.08)}
+.scope-list li::after{content:'';width:6px;height:10px;border-right:2px solid var(--gold-2);border-bottom:2px solid var(--gold-2);transform:rotate(45deg);position:absolute;left:6px;top:20px}
+.offer-block .price-note{margin-top:32px;padding-top:28px;border-top:1px solid var(--line-2);font-size:15px;color:var(--gold-2);text-align:center}
+.faq-item{border-bottom:1px solid var(--line);padding:0}
+.faq-q{padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:18px;font-weight:600;color:var(--text);transition:.2s}
+.faq-q:hover{color:var(--gold-2)}
+.faq-toggle{width:24px;height:24px;border-radius:50%;border:1px solid var(--line-2);position:relative;flex-shrink:0;transition:.3s}
+.faq-toggle::before,.faq-toggle::after{content:'';position:absolute;background:var(--gold-2);top:50%;left:50%;transition:.3s}
+.faq-toggle::before{width:10px;height:1.5px;transform:translate(-50%,-50%)}
+.faq-toggle::after{width:1.5px;height:10px;transform:translate(-50%,-50%)}
+.faq-item.open .faq-toggle::after{opacity:0}
+.faq-a{max-height:0;overflow:hidden;transition:.4s}
+.faq-item.open .faq-a{max-height:600px;padding-bottom:24px}
+.faq-a p{font-size:16px;color:var(--muted);max-width:none}
+.cta-section{background:linear-gradient(135deg,rgba(201,151,58,.1) 0%,rgba(226,185,106,.04) 100%);border:1px solid rgba(201,151,58,.3);border-radius:24px;padding:80px 60px;text-align:center;margin:40px 0 60px}
 .cta-section h2{max-width:620px;margin:0 auto 20px}
-.cta-section p{margin:0 auto 36px;max-width:580px;font-size:18px}
-.cta-primary{display:inline-block;padding:20px 44px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0a0805;text-decoration:none;border-radius:12px;font-weight:700;font-size:16px;box-shadow:0 12px 40px rgba(201,151,58,.3)}
+.cta-section p{margin:0 auto 36px;max-width:560px;font-size:17px}
+.cta-primary{display:inline-block;padding:20px 44px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0a0805;text-decoration:none;border-radius:12px;font-weight:700;font-size:16px;box-shadow:0 12px 40px rgba(201,151,58,.3);transition:.2s}
 .cta-primary:hover{transform:translateY(-2px)}
-.footer{padding:60px 0;border-top:1px solid var(--line);text-align:center}
-.footer p{margin:0 auto;font-size:14px}
-.footer a{color:var(--gold-2);text-decoration:none}
+.cta-sign{margin-top:28px;font-size:14px;color:var(--gold-2);font-style:italic}
+.footer{padding:48px 0;border-top:1px solid var(--line);text-align:center}
+.footer p{margin:0 auto;font-size:13px;color:var(--muted);letter-spacing:.05em}
 @media(max-width:768px){
 .meta-grid{grid-template-columns:1fr}
 .cta-section{padding:50px 24px}
-.del-item.open .del-body{padding:0 20px 24px}
-.del-body-inner{padding-left:0}
-.del-header{padding:20px}
+.market-row{grid-template-columns:1fr;gap:8px}
+.phase-block{grid-template-columns:1fr;gap:8px}
+.proof-grid{grid-template-columns:1fr}
+.offer-block{padding:32px 24px}
 section{padding:60px 0}
 }
 .reveal{opacity:0;transform:translateY(30px);transition:.8s}
@@ -78,191 +124,303 @@ section{padding:60px 0}
 <body>
 <nav>
 <div class="container nav-inner">
-<div class="logo">AG1 CONSULTING</div>
+<div class="logo">Digital Pathway Consulting</div>
 <a href="https://calendly.com/andreicopy/15min" class="nav-cta" target="_blank">Book A Call</a>
 </div>
 </nav>
 
 <section class="hero">
 <div class="container">
-<div class="eyebrow reveal">GROWTH PACKAGE · BUILT FOR CJ</div>
-<h1 class="reveal">A Content And Positioning System<br>Built For <em>C.J. Nakagawa</em></h1>
-<p class="reveal">Research, campaign angles, a live landing page, a 10-email newsletter sequence, and a content engine framework. Built to match a $181M sales year with a digital footprint that finally reflects it.</p>
+<div class="eyebrow reveal">Built For C.J. Nakagawa</div>
+<h1 class="reveal">Built For <em>C.J. Nakagawa</em><br>Digital Pathway Consulting</h1>
+<p class="reveal">Third-generation broker. $181M individual sales year. $1.8B in team transactions. Sotheby's #1 in market. And almost zero monetized online presence.</p>
 <div class="meta-grid reveal">
-<div class="meta-item"><div class="meta-label">Prospect</div><div class="meta-value">C.J. Nakagawa</div></div>
-<div class="meta-item"><div class="meta-label">Built By</div><div class="meta-value">Andrei · AG1 Consulting</div></div>
-<div class="meta-item"><div class="meta-label">Delivered</div><div class="meta-value">April 24, 2026</div></div>
+<div class="meta-item"><div class="meta-label">Heritage</div><div class="meta-value">3 generations</div></div>
+<div class="meta-item"><div class="meta-label">Sales (peak year)</div><div class="meta-value">$181M+</div></div>
+<div class="meta-item"><div class="meta-label">Team lifetime</div><div class="meta-value">$1.8B+</div></div>
 </div>
 </div>
 </section>
 
-<section style="padding-top:40px">
+<section>
+<div class="container-narrow">
+<h2 class="reveal">Why This Page Exists</h2>
+<div class="prose reveal">
+<p>Andrei and I built this page after a year of working alongside you on listings.</p>
+<p>We've shot your homes. Built virtual tours. Handled the listing-side marketing. And we kept noticing something we couldn't unsee.</p>
+<p>You're doing <strong>$181M</strong> years. Susan and you have transacted <strong>$1.8B</strong>. The team is <strong>#1 at Sotheby's</strong> in this market. Cube 3 is its own development play. Your client list runs through athletes, tech executives, and venture capital.</p>
+<p>And almost none of that lives online in a way that produces revenue outside the brokerage.</p>
+<p>Real estate is seasonal. December through February the market goes quiet. Listings slow. Commissions slow. Every other agent in the Bay Area faces the same trough.</p>
+<p><strong>You shouldn't.</strong></p>
+<p>This page is the plan to use the credibility you've already built to launch a high-ticket offer that runs alongside the brokerage and produces revenue twelve months a year, not just from March through November.</p>
+<div class="signature">- Francis | Digital Pathway Consulting</div>
+</div>
+</div>
+</section>
+
+<section style="background:linear-gradient(180deg,transparent 0%,rgba(201,151,58,.03) 50%,transparent 100%)">
 <div class="container">
-<div class="eyebrow reveal">DELIVERABLES</div>
-<h2 class="reveal">Inside The Package</h2>
-<p class="reveal" style="margin-bottom:40px">Six deliverables, each addressing a specific lever where the offline track record outpaces the current digital footprint.</p>
+<div class="eyebrow reveal">The Gaps</div>
+<h2 class="reveal">Three Things Sitting Idle Right Now</h2>
+<p class="section-sub reveal">All publicly observable. Nothing fabricated about what's behind the scenes.</p>
 
-<div class="del-item reveal">
-<div class="del-header" onclick="this.parentElement.classList.toggle('open')">
-<div class="del-title">
-<span class="del-num">01</span>
-<div class="del-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div>
-<div class="del-meta"><h3>Research Snapshot</h3><p>Five content accelerators, publicly observable</p></div>
+<div class="gap-grid">
+<div class="gap-card reveal">
+<span class="gap-tag critical">Critical</span>
+<h3>$181M Year, No Product</h3>
+<p>The single most credentialing line in luxury real estate is volume. You did $181M in a single year. There is no product, no mastermind, no consulting offer attached to that number. Other brokers running 1/10th your volume sell coaching for $20,000+ per seat. You sell nothing online.</p>
+<div class="fix"><strong>The Fix</strong>Build a high-ticket offer gated behind your numbers. Ambitious agents pay to learn how the third-generation, $181M, Sotheby's-#1 version of this works.</div>
 </div>
-<div class="del-toggle"></div>
+
+<div class="gap-card reveal">
+<span class="gap-tag critical">Critical</span>
+<h3>Three-Generation Network, No System To Monetize It</h3>
+<p>You and Susan have a four-decade network. Athletes, tech executives, venture capital, developers. That network is the most valuable asset in the business. Today it produces commissions on transactions. Nothing else. Once a deal closes, the relationship sits dormant until the next listing.</p>
+<div class="fix"><strong>The Fix</strong>A private community layer turns the network from one-time transactions into recurring monthly revenue, plus a captive audience for every future offer.</div>
 </div>
-<div class="del-body"><div class="del-body-inner">
-<h4>The Five Accelerators</h4>
+
+<div class="gap-card reveal">
+<span class="gap-tag high">High Impact</span>
+<h3>The Online Presence Doesn't Reflect Who You Are</h3>
+<p>@agent415 reads as a standard agent handle. No $181M number in the bio. LinkedIn is dormant. There is no YouTube channel in your name. The numbers exist on the agent page; the social surfaces don't show them. Anyone landing cold reads the wrong story about who they're hiring.</p>
+<div class="fix"><strong>The Fix</strong>Reposition every public surface around the volume number, the heritage, and the specialty (athletes, tech, development). Listings-to-content engine to keep it fed.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="eyebrow reveal">Market Context</div>
+<h2 class="reveal">What Others In Your Space Are Already Doing</h2>
+<p class="section-sub reveal">The category exists. The pricing is established. There's just no version of it with your actual track record at the price tier you'd command.</p>
+
+<div class="market-table">
+<div class="market-row reveal">
+<div>
+<div class="market-name">Tom Ferry</div>
+<div class="market-price">$20,000–$30,000 / yr per agent</div>
+</div>
+<div class="market-note">Generic real estate coaching to mid-tier agents. Volume coach, not a luxury operator. None of his client roster has done a $181M year personally.</div>
+</div>
+
+<div class="market-row reveal">
+<div>
+<div class="market-name">Ryan Serhant</div>
+<div class="market-price">$10K–$25K / yr per agent</div>
+</div>
+<div class="market-note">SERHANT Ventures sells coaching to agents wanting to break into luxury. Million Dollar Listing fame is the leverage. Closest direct comp to what's being proposed for you, except your Marin/SF heritage and Sotheby's affiliation hit a different register than the NYC media-broker positioning.</div>
+</div>
+
+<div class="market-row reveal">
+<div>
+<div class="market-name">Brandon Turner / BiggerPockets</div>
+<div class="market-price">$2M+ / yr revenue</div>
+</div>
+<div class="market-note">Investor education, not luxury. Different niche, but same business model proof: a credible operator turning network and authority into an info business that runs alongside the original work.</div>
+</div>
+
+<div class="market-row reveal">
+<div>
+<div class="market-name">Grant Cardone</div>
+<div class="market-price">$10K masterminds</div>
+</div>
+<div class="market-note">Bombastic positioning, contested volume claims, multifamily focus. You're the antithesis: discreet, real volume, third-generation heritage, luxury Bay Area. Useful as a price anchor and a tonal counterpoint, not a model.</div>
+</div>
+</div>
+
+<div class="market-callout reveal">
+Every name above is selling info to agents who want to be where you already are. The category has $20K–$30K/year price tags on it. There is <strong>no version</strong> of this that includes someone with your actual track record in Marin/SF luxury at the price tier you'd command.
+</div>
+</div>
+</section>
+
+<section style="background:linear-gradient(180deg,transparent 0%,rgba(201,151,58,.03) 50%,transparent 100%)">
+<div class="container">
+<div class="eyebrow reveal">The System</div>
+<h2 class="reveal">A Three-Phase Plan, Built For Your Situation</h2>
+<p class="section-sub reveal">High-ticket only. We don't build $97 ebook funnels. The audience for the third-generation, $181M, Sotheby's-#1 version of you is not a $97 audience.</p>
+
+<div class="phase-block reveal">
+<div class="phase-num">Phase 01<span class="month">Month 1</span></div>
+<div class="phase-content">
+<h3>In-Person Luxury Agent Mastermind</h3>
+<p style="margin-bottom:14px">A two-day workshop in Marin or San Francisco. 12–20 ambitious luxury agents. Walks through the third-generation playbook, network monetization, off-market sourcing, and the athlete/tech-executive specialty. Filmed and edited end-to-end for residual content and Phase 3 inventory.</p>
 <ul>
-<li><strong>The $181M proof isn't in the IG bio.</strong> The single most credentialing line in luxury RE is missing from the surface that new visitors see first.</li>
-<li><strong>LinkedIn is dormant.</strong> The platform where Bay Area HNW buyers live, and it's running on listing announcements.</li>
-<li><strong>No listings-to-content pipeline.</strong> Every listing is a content factory waiting. None of it is being compiled.</li>
-<li><strong>YouTube long-form is unclaimed.</strong> No "CJ Nakagawa" channel. Neighborhood tours and market commentary have almost no serious competitor in the Marin + SF luxury tier.</li>
-<li><strong>No off-market capture.</strong> The single highest-value asset in luxury RE, and there is no way for a new visitor to opt in to receive it.</li>
+<li>Landing page built and live within 10 days</li>
+<li>Targeted outreach to your existing network and Sotheby's affiliated agents</li>
+<li>Email sequence to past contacts, network referrers, and warm list</li>
+<li>Brand and positioning video shot in week one</li>
+<li>Event production, room, food, and run-of-show handled</li>
 </ul>
-<h4>The Biggest Fix</h4>
-<p>Build the listings-to-content pipeline. Every new listing produces a Reel, a LinkedIn post, a YouTube walkthrough, a neighborhood explainer, and a buyer guide. The raw material is already being created. It just needs compiling and distribution.</p>
-</div></div>
+<div class="rev-line"><strong>Revenue Model</strong>12 seats @ $5,000 = $60,000 &nbsp;·&nbsp; 20 seats @ $7,500 = $150,000</div>
+</div>
 </div>
 
-<div class="del-item reveal">
-<div class="del-header" onclick="this.parentElement.classList.toggle('open')">
-<div class="del-title">
-<span class="del-num">02</span>
-<div class="del-icon"><svg viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/></svg></div>
-<div class="del-meta"><h3>5 Campaign Angles</h3><p>Positioning hooks, Bay Area luxury</p></div>
-</div>
-<div class="del-toggle"></div>
-</div>
-<div class="del-body"><div class="del-body-inner">
-<h4>Angle Matrix</h4>
+<div class="phase-block reveal">
+<div class="phase-num">Phase 02<span class="month">Month 2</span></div>
+<div class="phase-content">
+<h3>Private Online Community</h3>
+<p style="margin-bottom:14px">Recurring monthly layer for agents who attended the mastermind, plus new arrivals brought in by Phase 3. Monthly group call hosted by you. Off-market deal flow Q&amp;A. Network introductions. Light-touch hosting; the value is the proximity to you and the room you've assembled.</p>
 <ul>
-<li><strong>The $181M Year:</strong> Lead with the number. It reframes the category.</li>
-<li><strong>The Third-Generation Broker:</strong> Heritage as competitive moat.</li>
-<li><strong>Whisper Listings:</strong> Off-market scarcity positioning.</li>
-<li><strong>The Architect's Broker:</strong> Cube 3 development background as taste signal.</li>
-<li><strong>The Quiet Transaction:</strong> Discretion-first, for athletes and execs.</li>
+<li>Platform setup (Circle or Skool, configured and branded)</li>
+<li>Onboarding flow and welcome sequence</li>
+<li>Monthly call structure and content calendar</li>
+<li>Retention loop and expansion offer</li>
 </ul>
-<h4>Brand Voice Rules</h4>
-<p>Understated luxury. Authority by proof, not adjectives. Heritage-forward. Architectural specificity. Zero hustle language. Zero course-guru tone. Douglas Elliman's Ryan Serhant for scale, Marin-coastal restraint for register.</p>
-</div></div>
+<div class="rev-line"><strong>Revenue Model</strong>30 members @ $500/month = $15,000/month recurring</div>
+</div>
 </div>
 
-<div class="del-item reveal">
-<div class="del-header" onclick="this.parentElement.classList.toggle('open')">
-<div class="del-title">
-<span class="del-num">03</span>
-<div class="del-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none"/></svg></div>
-<div class="del-meta"><h3>3 Ad Scripts</h3><p>30 to 60 seconds, brand positioning</p></div>
-</div>
-<div class="del-toggle"></div>
-</div>
-<div class="del-body"><div class="del-body-inner">
-<h4>Script 1 · The $181M Year (45s)</h4>
-<p>Lead with the number. Third-generation framing. Local knowledge stacks differently.</p>
-<h4>Script 2 · Whisper Listings (30s)</h4>
-<p>Thirty percent of Marin's best inventory never hits MLS. Network access positioning.</p>
-<h4>Script 3 · The Architect's Broker (60s)</h4>
-<p>Reading a home through a builder's eyes. Cube 3 as the credential. Design-forward buyer appeal.</p>
-</div></div>
-</div>
-
-<div class="del-item reveal">
-<div class="del-header" onclick="this.parentElement.classList.toggle('open')">
-<div class="del-title">
-<span class="del-num">04</span>
-<div class="del-icon"><svg viewBox="0 0 24 24"><path d="M3 7l9 6 9-6v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M3 7l9 6 9-6"/></svg></div>
-<div class="del-meta"><h3>10-Email Newsletter Sequence</h3><p>Off-market briefs, 25-day drip</p></div>
-</div>
-<div class="del-toggle"></div>
-</div>
-<div class="del-body"><div class="del-body-inner">
-<h4>Sequence Overview</h4>
-<p>Written from CJ to past clients, warm leads, and network referrers. 150-300 words per email. Value-first, no course pitches. Purpose: stay top of mind between transactions and drive inbound intros.</p>
-<h4>Email Arc</h4>
+<div class="phase-block reveal">
+<div class="phase-num">Phase 03<span class="month">Month 3+</span></div>
+<div class="phase-content">
+<h3>Webinar Funnel + Flagship Course</h3>
+<p style="margin-bottom:14px">Webinar deck and email sequence. Flagship course built from mastermind footage. Sells continuously, year-round, while you sleep, while you're showing homes, and especially while the listing market is quiet.</p>
 <ul>
-<li>Day 0 · Welcome and how the list works</li>
-<li>Day 2 · Tiburon waterfront market note</li>
-<li>Day 5 · Mill Valley vs Tiburon vs Belvedere breakdown</li>
-<li>Day 8 · The deal I walked a client away from</li>
-<li>Day 11 · Private brief, Belvedere estate</li>
-<li>Day 14 · Why I work weekends</li>
-<li>Day 17 · What athlete buyers actually need</li>
-<li>Day 20 · How price per square foot lies in Marin</li>
-<li>Day 23 · Cube 3 development update</li>
-<li>Day 25 · Final note, what comes next</li>
+<li>Webinar slide deck and live-rehearsed script</li>
+<li>Pre-webinar and post-webinar email sequences</li>
+<li>Course structured from Phase 1 mastermind footage</li>
+<li>Bi-weekly evergreen webinar schedule once dialed in</li>
 </ul>
-</div></div>
+<div class="rev-line"><strong>Revenue Model</strong>Builds on Phases 1 + 2. No course needed to start. Becomes the seasonal revenue smoother by month 6.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="eyebrow reveal">Revenue Projection</div>
+<h2 class="reveal">What This Looks Like At Conservative Numbers</h2>
+<p class="section-sub reveal">Year-one floor. Phases 1 and 2 only. Phase 3 is upside.</p>
+
+<div class="rev-table reveal">
+<div class="rev-row">
+<div class="rev-stream"><strong>In-Person Masterminds</strong>4 events / year &nbsp;·&nbsp; 15 seats avg @ $6,000</div>
+<div class="rev-amount">$360,000</div>
+</div>
+<div class="rev-row">
+<div class="rev-stream"><strong>Private Community</strong>30 members @ $500/month &nbsp;·&nbsp; full year</div>
+<div class="rev-amount">$180,000</div>
+</div>
+<div class="rev-row">
+<div class="rev-stream"><strong>Webinar + Course</strong>Launches Month 3, ramps Month 6+</div>
+<div class="rev-amount">upside</div>
+</div>
+<div class="rev-total">
+<div class="rev-total-label">Year-One Floor</div>
+<div class="rev-total-amount">$540,000+</div>
+</div>
 </div>
 
-<div class="del-item reveal">
-<div class="del-header" onclick="this.parentElement.classList.toggle('open')">
-<div class="del-title">
-<span class="del-num">05</span>
-<div class="del-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
-<div class="del-meta"><h3>Live Landing Page</h3><p>Dark luxury, navy and gold, deployed</p></div>
+<div class="rev-note reveal">
+This runs <strong>alongside</strong> the brokerage. Not instead of it. The deal flow stays the deal flow. What this adds is a parallel income stream that <strong>does not dip with the listing calendar</strong>. December through February, when most agents in this market go quiet, the community dues collect and the webinar funnel keeps converting. That is the entire point.
 </div>
-<div class="del-toggle"></div>
 </div>
-<div class="del-body"><div class="del-body-inner">
-<h4>Live URL</h4>
-<p><a href="https://andrei170.github.io/agent415-landing/" target="_blank" style="color:var(--gold-2)">andrei170.github.io/agent415-landing/</a></p>
-<h4>What's On It</h4>
-<ul>
-<li>Hero with 3-min positioning video placeholder</li>
-<li>Stats bar: $181M+, $1.8B+, 900+, 3 generations</li>
-<li>Neighborhood tag row: Tiburon, Belvedere, Mill Valley, Ross, Kentfield, San Rafael, Pacific Heights, Presidio Heights</li>
-<li>3 problem cards framed for luxury buyers: off-market access, neighborhood reality, investment upside</li>
-<li>3 pillar framework: local knowledge, HNW network, discretion</li>
-<li>Off-market list opt-in</li>
-<li>Consultation-based engagement block with commission hint language</li>
-<li>FAQ covering privacy, off-market channels, referral routing</li>
+</section>
+
+<section style="background:linear-gradient(180deg,transparent 0%,rgba(201,151,58,.03) 50%,transparent 100%)">
+<div class="container">
+<div class="eyebrow reveal">Who's Done This Before</div>
+<h2 class="reveal">Real Estate Is The Niche</h2>
+<p class="section-sub reveal">Not a new market for either of us. The two halves of this team cover the inventory pipeline and the info-product pipeline.</p>
+
+<div class="proof-grid">
+<div class="proof-card reveal">
+<h3>Francis Medina</h3>
+<div class="role">Founder · Digital Pathway</div>
+<p>Has marketed <strong style="color:var(--gold-2)">$4 billion+ in real estate inventory</strong>. Built and shot for top luxury brokerages, athlete-buyer accounts, and developer partners. Already runs the video and listings work for The Golden Gate Group, which is how this conversation started in the first place.</p>
+</div>
+<div class="proof-card reveal">
+<h3>Andrei Givero</h3>
+<div class="role">Strategic Partner · Online Offers</div>
+<p>Has generated <strong style="color:var(--gold-2)">$1M+ in revenue for online info products and high-ticket coaching launches</strong>. Specializes in turning offline credibility into online revenue. Builds the funnels, copy, and ad campaigns that take a credentialed operator to a real online business.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container-narrow">
+<div class="eyebrow reveal">The Offer</div>
+<h2 class="reveal">Here's What Working Together Looks Like</h2>
+<p class="section-sub reveal">Scope is fixed. Everything ships in the first 90 days.</p>
+
+<div class="offer-block reveal">
+<h3>Scope</h3>
+<p class="scope-intro">Everything below is in. No add-ons sold separately, no surprise line items.</p>
+<ul class="scope-list">
+<li>In-person mastermind launch in 30–45 days, end to end</li>
+<li>Brand and positioning video shot in week one</li>
+<li>Landing page, ad campaign, email sequence, outreach to your existing network</li>
+<li>Private community setup in month two (platform, onboarding, monthly call structure)</li>
+<li>Webinar funnel and email sequences in month three</li>
+<li>LinkedIn rebuild and posting cadence dialed in</li>
+<li>Listings-to-content engine ongoing (Reels, posts, walkthroughs, neighborhood guides)</li>
+<li>Tracking dashboard for revenue, list growth, and content performance</li>
+<li>Francis and Andrei on the ground for the in-person event</li>
 </ul>
-<a href="https://andrei170.github.io/agent415-landing/" target="_blank" class="del-link">View Landing Page →</a>
-</div></div>
+<div class="price-note">Investment is set on the call once we agree the plan fits. No retainer until the system produces.</div>
+</div>
+</div>
+</section>
+
+<section style="background:linear-gradient(180deg,transparent 0%,rgba(201,151,58,.03) 50%,transparent 100%)">
+<div class="container-narrow">
+<div class="eyebrow reveal">Questions</div>
+<h2 class="reveal">The Ones I'd Expect You To Have</h2>
+<p class="section-sub reveal">Short, direct answers. The longer ones we cover on the call.</p>
+
+<div class="reveal">
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do I need an existing audience first?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>No. Your name, Susan's, the Sotheby's affiliation, and your direct network are the audience. The first mastermind sells off the existing network. Audience-building runs in parallel, in the background, for Phase 2 and 3.</p></div>
 </div>
 
-<div class="del-item reveal">
-<div class="del-header" onclick="this.parentElement.classList.toggle('open')">
-<div class="del-title">
-<span class="del-num">06</span>
-<div class="del-icon"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1118 0 9 9 0 01-18 0z"/><path d="M12 7v5l3 3"/></svg></div>
-<div class="del-meta"><h3>Content Engine Framework</h3><p>Listings-first, one week per month</p></div>
-</div>
-<div class="del-toggle"></div>
-</div>
-<div class="del-body"><div class="del-body-inner">
-<h4>The Engine</h4>
-<ul>
-<li><strong>Input:</strong> Each new listing CJ takes.</li>
-<li><strong>Output per listing:</strong> One Instagram Reel, one LinkedIn long-form post, one YouTube walkthrough (2-4 min), one neighborhood explainer (short), one buyer guide email.</li>
-<li><strong>Cadence:</strong> One filming day per month covering 3-5 active listings. Rest of the month is editing, scheduling, and distribution.</li>
-<li><strong>YouTube channel:</strong> CJ Nakagawa personal channel. Neighborhood tours (Tiburon, Belvedere, Mill Valley, Pacific Heights). Quarterly market updates. Cube 3 development diaries.</li>
-<li><strong>LinkedIn cadence:</strong> Two posts per week, market analysis and anonymized deal stories.</li>
-<li><strong>Retargeting layer:</strong> Small paid boost on top-performing organic posts to HNW Bay Area lookalikes.</li>
-</ul>
-<h4>Short Positioning Video</h4>
-<p>3-5 minute video outline lives above the fold on the hub. Opens with the $181M number, covers heritage, specialty, how we work, proof. Replaces "hi welcome to my website" with hard proof in the first 30 seconds.</p>
-</div></div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much time does this require from me?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>One day of filming per month. Two days for the in-person event. The rest is calendar holds and intro emails. Francis's team handles all production. Andrei's side handles all funnel, copy, and ad work. You don't become a content creator. You stay a broker who happens to also have an info business.</p></div>
 </div>
 
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Does this conflict with the brokerage or Sotheby's?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>No. The mastermind audience is other ambitious agents, not your buyers. There is zero competitive overlap with Sotheby's deal flow. If anything, the visibility lifts the brokerage too, because every public-facing asset reinforces your numbers and your specialty.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How quickly is there real revenue?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>First mastermind: 30–45 days from kickoff. First community subscriptions: month two. Webinar and course revenue: month three onward, ramping into month six.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What about December through February when the market goes quiet?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>This is the entire reason to build it. Real estate slows. Info offers don't. Community dues collect and the webinar funnel keeps selling through the trough. Year-round revenue is the unlock.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why not just build YouTube and Instagram first?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>Audience-building from scratch is a 12-to-24-month exercise. High-ticket sells off an existing network in days. Phase 1 doesn't need a million followers. It needs the right twenty seats sold to people already in your contact list. Phase 3 benefits from social, and we build it in the background while Phase 1 and 2 produce revenue.</p></div>
+</div>
+</div>
 </div>
 </section>
 
 <section>
 <div class="container">
 <div class="cta-section reveal">
-<div class="eyebrow">NEXT STEP</div>
-<h2>If Any Of This Clicks,<br>Let's Talk For 15 Minutes</h2>
-<p>No pitch unless it makes sense for both of us. Just a conversation about what the content and positioning system would actually look like, whether it's built together or you run it in-house.</p>
-<a href="https://calendly.com/andreicopy/15min" class="cta-primary" target="_blank">Book A 15-Min Call →</a>
+<div class="eyebrow">Next Step</div>
+<h2>Twenty Minutes. No Pitch.<br>Just Look At The Plan Together.</h2>
+<p>If any of this clicks, the next step is a short call to walk through the specific shape of Phase 1 for you, and decide whether it's something we build together or something you take in-house.</p>
+<a href="https://calendly.com/andreicopy/15min" class="cta-primary" target="_blank">Book A Call</a>
+<div class="cta-sign">- Francis | Digital Pathway Consulting</div>
 </div>
 </div>
 </section>
 
 <footer class="footer">
 <div class="container">
-<p>Built by AG1 Consulting · <a href="mailto:info@andreicopy.net">info@andreicopy.net</a> · April 2026</p>
+<p>Built by Digital Pathway Consulting · This page was created exclusively for C.J. Nakagawa · April 2026</p>
 </div>
 </footer>
 
